@@ -24,17 +24,17 @@ public class InjectionTests {
 
     @Test
     public void testPropertyInjectedController() {
-        assertEquals("Hello everyone from base service!!!", propertyInjectedController.sayHello());
+        assertEquals("Hello everyone from primary service!!!", propertyInjectedController.sayHello());
     }
 
     @Test
     public void testSetterInjectedController() {
-        assertEquals("Hello everyone from base service!!!", setterInjectedController.sayHello());
+        assertEquals("Hello everyone from primary service!!!", setterInjectedController.sayHello());
     }
 
     @Test
     public void testConstructorInjectedController() {
-        assertEquals("Hello everyone from base service!!!", constructorInjectedController.sayHello());
+        assertEquals("Hello everyone from primary service!!!", constructorInjectedController.sayHello());
     }
 
 }
