@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.aloha.spring.core.controller.ConstructorInjectedController;
+import com.aloha.spring.core.controller.MyI18nController;
 import com.aloha.spring.core.controller.PropertyInjectedController;
 import com.aloha.spring.core.controller.SetterInjectedController;
 
@@ -21,6 +22,14 @@ public class InjectionTests {
 
     @Autowired
     private ConstructorInjectedController constructorInjectedController;
+
+    @Autowired
+    private MyI18nController myI18nController;
+
+    @Test
+    public void testMyI18nController() {
+        assertEquals("Hello!!!", myI18nController.sayHello());
+    }
 
     @Test
     public void testPropertyInjectedController() {
