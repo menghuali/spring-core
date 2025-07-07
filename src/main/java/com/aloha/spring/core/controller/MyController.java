@@ -12,4 +12,12 @@ public class MyController {
         log.info("Hello, World! I am {}.", this.getClass().getSimpleName());
     }
 
+    public void beforeInit() {
+        log.info("## - Before Init - Called by BeanPostProcessor.");
+    }
+
+    public void afterInit() {
+        log.info("## - After Init - Called by BeanPostProcessor.");
+    }
+
 }
